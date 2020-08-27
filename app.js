@@ -3,6 +3,9 @@ const home = require("./routes/home");
 
 const app = express();
 
-app.use("/api/", home);
+app.set("view engine", "pug");
+app.set("views", "./public");
+
+app.use("/", home);
 
 app.listen(4000);
