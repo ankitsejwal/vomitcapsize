@@ -1,11 +1,14 @@
+// convert to uppercase
 const uppercase = (paragraph) => {
   return paragraph.toUpperCase();
 };
 
+// convert to lowercase
 const lowercase = (paragraph) => {
   return paragraph.toLowerCase();
 };
 
+// convert to titlecase
 const titlecase = (paragraph) => {
   const words = paragraph.split(" ");
   const filtered = [];
@@ -18,6 +21,4 @@ const titlecase = (paragraph) => {
   return titlecase;
 };
 
-console.log(uppercase("This is the next thinG is the."));
-console.log(lowercase("This is the next thinG is the."));
-console.log(titlecase("This is the next thinG is the."));
+module.exports = { uppercase, lowercase, titlecase };
