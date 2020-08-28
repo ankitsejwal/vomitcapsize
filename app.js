@@ -1,11 +1,12 @@
 const express = require("express");
-const home = require("./routes/home");
 
 const app = express();
 
 app.set("view engine", "pug");
 app.set("views", "./public");
 
-app.use("/", home);
+app.get("/", (req, res) => {
+  res.render("index", { message: "Hi this has to be done!" });
+});
 
 app.listen(4000);
