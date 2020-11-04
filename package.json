@@ -1,0 +1,25 @@
+{
+  "name": "vomitcapsize",
+  "version": "1.0.0",
+  "description": "-  vomit + capitalize &nbsp; -----> &nbsp; vomitcapsize",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitsejwal/vomitcapsize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ankitsejwal/vomitcapsize/issues"
+  },
+  "homepage": "https://github.com/ankitsejwal/vomitcapsize#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  }
+}
