@@ -1,11 +1,17 @@
 <div class="row vh-100 vw-100">
-  <div class="col" contenteditable="true">
-    <p>Paste your text here ...</p>
+  <div id="paragraph" class="col" contenteditable="true">
+    Paste your text here ...
   </div>
 </div>
 
 <div class="links row justify-content-center">
-  <div class="col-4"><button class="btn btn-info">lowercase</button></div>
-  <div class="col-4"><button class="btn btn-success">Capitalize</button></div>
-  <div class="col-4"><button class="btn btn-warning">UPPERCASE</button></div>
+  <div class="col-4">
+    <button class="btn btn-info" onclick="lowercase()">lowercase</button>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-success" onclick="titlecase()">TitleCase</button>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-warning" onclick="uppercase()">UPPERCASE</button>
+  </div>
 </div>

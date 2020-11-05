@@ -1,24 +1,25 @@
-// convert to uppercase
-const uppercase = (paragraph) => {
-  return paragraph.toUpperCase();
-};
+// convert paragraph
 
-// convert to lowercase
-const lowercase = (paragraph) => {
-  return paragraph.toLowerCase();
-};
+function uppercase() {
+  let paragraph = document.getElementById("paragraph");
+  paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
+}
 
-// convert to titlecase
-const titlecase = (paragraph) => {
-  const words = paragraph.split(" ");
-  const filtered = [];
+function lowercase() {
+  let paragraph = document.getElementById("paragraph");
+  paragraph.innerHTML = paragraph.innerHTML.toLowerCase();
+  return paragraph.innerHTML;
+}
+
+function titlecase() {
+  let paragraph = document.getElementById("paragraph");
+  paragraph.innerHTML = lowercase();
+  let words = paragraph.innerHTML.split(" ");
+  let filtered = [];
 
   for (let word of words) {
     filtered.push(word.charAt(0).toUpperCase() + word.slice(1));
   }
-
-  const titlecase = filtered.join(" ");
-  return titlecase;
-};
-
-module.exports = { uppercase, lowercase, titlecase };
+  let titlecase = filtered.join(" ");
+  paragraph.innerHTML = titlecase;
+}
