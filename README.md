@@ -1,5 +1,5 @@
 # vomitcapsize
 
--  vomit + capitalize &nbsp; -----> &nbsp; vomitcapsize
+- vomit + capital + size &nbsp; -----> &nbsp; vomitcapsize
 
-Converts text to uppercase, lowercase or title case.
+Converts a chunk of text to uppercase, lowercase and title case.
