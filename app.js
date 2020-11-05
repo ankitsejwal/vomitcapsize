@@ -4,6 +4,7 @@ const expressLayouts = require("express-ejs-layouts");
 const app = express();
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(expressLayouts);
 
 app.get("/", (req, res) => {
