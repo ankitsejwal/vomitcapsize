@@ -1,13 +1,13 @@
 body {
-  font-family: "Space Grotesk", sans-serif;
-  line-height: 4rem;
-  font-size: 3.8rem;
-  color: aquamarine;
-  font-weight: 700;
   background-color: rgb(95, 108, 103);
 }
 
 #paragraph {
+  font-family: "Space Grotesk", sans-serif;
+  color: aquamarine;
+  font-weight: 700;
+  line-height: 3.5rem;
+  font-size: 3.5rem;
   padding: 20px;
 }
 

@@ -1,3 +1,17 @@
+// font size
+function fontSize(value) {
+  let paragraph = document.getElementById("paragraph");
+  let style = window
+    .getComputedStyle(paragraph, null)
+    .getPropertyValue("font-size");
+  var fontSize = parseFloat(style);
+
+  console.log(fontSize);
+  fontSize = fontSize + value + "px";
+  paragraph.style.fontSize = fontSize;
+  paragraph.style.lineHeight = fontSize;
+}
+
 // convert paragraph
 
 function uppercase() {
