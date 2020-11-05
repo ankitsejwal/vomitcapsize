@@ -12,6 +12,12 @@ body {
 }
 
 .links {
+  padding-right: 10px;
   position: fixed;
   bottom: 0;
+  right: 0;
+}
+
+.links p {
+  line-height: 1rem;
 }
