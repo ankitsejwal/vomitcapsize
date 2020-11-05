@@ -1,3 +1,16 @@
+// copy
+function copyToClipboard() {
+  var from = document.getElementById("paragraph");
+  var range = document.createRange();
+  window.getSelection().removeAllRanges();
+  range.selectNode(from);
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+  const button = document.getElementById("copy");
+  button.innerHTML = "copied!!";
+}
+
 // font size
 function fontSize(value) {
   let paragraph = document.getElementById("paragraph");

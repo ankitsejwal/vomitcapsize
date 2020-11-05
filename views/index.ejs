@@ -4,18 +4,25 @@
   </div>
 </div>
 
-<div class="links justify-content-right">
+<div class="links left">
   <p>
-    <button class="btn btn-light" onclick="fontSize(+4)">+</button>
-    <button class="btn btn-light" onclick="fontSize(-4)">-</button>
+    <button id="copy" class="btn btn-light" onclick="copyToClipboard()">
+      copy txt
+    </button>
   </p>
+  <p class="d-flex justify-content-between">
+    <button class="btn btn-outline-light" onclick="fontSize(+4)">+</button>
+    <button class="btn btn-outline-light" onclick="fontSize(-4)">-</button>
+  </p>
+</div>
+
+<div class="links right">
   <p>
     <button class="btn btn-success" onclick="titlecase()">TitleCase</button>
   </p>
   <p>
     <button class="btn btn-info" onclick="lowercase()">lowercase</button>
   </p>
-
   <p>
     <button class="btn btn-warning" onclick="uppercase()">UPPERCASE</button>
   </p>
