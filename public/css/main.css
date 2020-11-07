@@ -31,3 +31,7 @@ body {
   opacity: 0.9;
   margin: 0px;
 }
+
+.btn {
+  font-size: 0.9rem;
+}
