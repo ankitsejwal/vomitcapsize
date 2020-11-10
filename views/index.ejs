@@ -4,32 +4,30 @@
   </div>
 </div>
 
-<div class="links left">
-  <p>
-    <button id="copy" class="btn btn-light" onclick="copyToClipboard()">
-      copy txt
-    </button>
-  </p>
-  <p class="d-flex justify-content-between">
-    <button class="btn btn-outline-light" onclick="fontSize(+4)">+</button>
-    <button class="btn btn-outline-light" onclick="fontSize(-4)">-</button>
-  </p>
+<div class="row buttons right fixed-bottom">
+  <div class="col-md-3 col-lg-2">
+    <div class="copy-text d-flex justify-content-between">
+      <button id="copy" class="btn btn-light" onclick="copyToClipboard()">
+        COPY TEXT
+      </button>
+      <div class="plus-minus">
+        <button class="btn btn-outline-light" onclick="fontSize(+4)">+</button>
+        <button class="btn btn-outline-light" onclick="fontSize(-4)">-</button>
+      </div>
+      </div>
+    <div class="row">
+      <div class="col-4 col-md-12">
+          <button class="btn btn-block btn-success button" onclick="titlecase()">TitleCase</button>
+        </div>
+        <div class="col-4 col-md-12 button">        
+          <button class="btn btn-block btn-warning" onclick="uppercase()">UPPERCASE</button>
+        </div>
+        <div class="col-4 col-md-12 button">
+          <button class="btn btn-block btn-info" onclick="lowercase()">lowercase</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="links right">
-  <p>
-    <button class="btn btn-block btn-success" onclick="titlecase()">
-      TitleCase
-    </button>
-  </p>
-  <p>
-    <button class="btn btn-block btn-info" onclick="lowercase()">
-      lowercase
-    </button>
-  </p>
-  <p>
-    <button class="btn btn-block btn-warning" onclick="uppercase()">
-      UPPERCASE
-    </button>
-  </p>
-</div>
+

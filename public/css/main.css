@@ -11,27 +11,27 @@ body {
   padding: 20px;
 }
 
-.left {
-  padding-left: 20px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  text-align: left;
+.copy-text {
+  margin-bottom: 10px;
 }
 
-.right {
-  padding-right: 20px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  text-align: right;
+.buttons {
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
-.links p button {
+.links button {
   opacity: 0.9;
-  margin: 0px;
 }
 
 .btn {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.plus-minus {
+  /* padding: 10px; */
+}
+
+.button {
+  margin: 5px 0;
 }
