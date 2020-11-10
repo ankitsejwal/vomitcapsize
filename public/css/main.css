@@ -20,12 +20,7 @@ body {
 }
 
 .right {
-  padding-right: 20px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  text-align: right;
-  background-color: aliceblue;
+  padding: 0 10px;
 }
 
 .links p button {
@@ -34,6 +29,9 @@ body {
 }
 
 .btn {
-  font-size: 0.9rem;
-  margin: 10px;
+  font-size: 0.8rem;
+}
+
+.button {
+  margin: 5px 0;
 }
