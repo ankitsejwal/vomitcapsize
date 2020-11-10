@@ -25,6 +25,7 @@ body {
   bottom: 0;
   right: 0;
   text-align: right;
+  background-color: aliceblue;
 }
 
 .links p button {
@@ -34,4 +35,5 @@ body {
 
 .btn {
   font-size: 0.9rem;
+  margin: 10px;
 }
