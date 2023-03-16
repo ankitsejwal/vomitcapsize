@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import Alert from "./Alert";
 
-export default function TextForm() {
+export default function TextForm(props) {
   const [text, setText] = useState("Enter text here");
 
   const handleOnChange = (event) => setText(event.target.value);
   const upperCase = () => setText(text.toUpperCase());
   const lowerCase = () => setText(text.toLowerCase());
-  const copyText = () => navigator.clipboard.writeText(text);
   const clearText = () => setText("");
+
+  const copyText = () => {
+    navigator.clipboard.writeText(text);
+    props.showAlert("success", "Text has been copied to clipboard");
+  };
 
   const capitalizeCase = () => {
     let words = text.trim().split(" ");
@@ -18,6 +23,7 @@ export default function TextForm() {
     }
     words = capitalizedWords.join(" ");
     setText(words);
+    props.showAlert("success", "Text has been capitalized");
   };
 
   const removeWhiteSpace = () => {

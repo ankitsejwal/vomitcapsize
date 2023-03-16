@@ -1,13 +1,27 @@
+import React, { useState } from "react";
 import "../App.css";
+import Alert from "./Alert";
 import Nav from "./Nav";
 import TextForm from "./TextForm";
 
-function App() {
+export default function App() {
+  const [alert, setAlert] = useState(null);
+  const showAlert = (type, message) => {
+    setAlert({
+      type: type,
+      message: message,
+    });
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 2000);
+  };
+
   return (
     <>
       <Nav />
-      <TextForm />
+      <Alert alert={alert} />
+      <TextForm showAlert={showAlert} />
     </>
   );
 }
-export default App;
