@@ -3,8 +3,12 @@ import React, { useState } from "react";
 export default function TextForm() {
   const [text, setText] = useState("Enter text here");
 
+  const handleOnChange = (event) => setText(event.target.value);
   const upperCase = () => setText(text.toUpperCase());
   const lowerCase = () => setText(text.toLowerCase());
+  const copyText = () => navigator.clipboard.writeText(text);
+  const clearText = () => setText("");
+
   const capitalizeCase = () => {
     let words = text.trim().split(" ");
     let capitalizedWords = [];
@@ -15,10 +19,17 @@ export default function TextForm() {
     words = capitalizedWords.join(" ");
     setText(words);
   };
-  const clearText = () => setText("");
 
-  const handleOnChange = (event) => {
-    setText(event.target.value);
+  const removeWhiteSpace = () => {
+    let words = text.split(" ");
+    let sanitizedWords = [];
+
+    for (let w of words) {
+      if (w) {
+        sanitizedWords.push(w);
+      }
+    }
+    setText(sanitizedWords.join(" "));
   };
 
   return (
@@ -34,17 +45,23 @@ export default function TextForm() {
           value={text}
           onChange={handleOnChange}
         ></textarea>
-        <button className="btn btn-primary mx-1" onClick={upperCase}>
+        <button className="btn btn-primary m-1" onClick={upperCase}>
           UPPERCASE
         </button>
-        <button className="btn btn-secondary mx-1" onClick={lowerCase}>
+        <button className="btn btn-secondary m-1" onClick={lowerCase}>
           lowercase
         </button>
-        <button className="btn btn-info mx-1" onClick={capitalizeCase}>
+        <button className="btn btn-info m-1" onClick={capitalizeCase}>
           Capitalize
         </button>
-        <button className="btn btn-danger mx-1" onClick={clearText}>
+        <button className="btn btn-danger m-1" onClick={clearText}>
           clear
+        </button>
+        <button className="btn btn-info m-1" onClick={copyText}>
+          Copy text
+        </button>
+        <button className="btn btn-info m-1" onClick={removeWhiteSpace}>
+          Remove white spaces
         </button>
       </div>
       <div className="container p-5">
