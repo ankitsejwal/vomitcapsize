@@ -2,35 +2,22 @@ import { useState } from 'react';
 
 function App() {
   const [text, setText] = useState('');
-  const [wordCount, setWordCount] = useState(0);
 
-  const handleOnChange = (e) => {
-    // change the state of the text
-    setText(e.target.value);
-
-    // change the state of the wordCount
-    const words = text.split(' ');
-    const filteredWords = words.filter((word) => word != '');
-    setWordCount(filteredWords.length);
-  };
-
-  const handleClear = () => {
-    setText('');
-    setWordCount(0);
-  };
+  const handleOnChange = (e) => setText(e.target.value);
+  const handleClear = () => setText('');
   const handleRemoveWhiteSpace = () => setText(text.trim());
   const handleCopytoClipboard = () => navigator.clipboard.writeText(text).then(() => console.log('copied'));
-  const lowercase = () => setText(text.toLowerCase());
-  const uppercase = () => setText(text.toUpperCase());
-  const titlecase = () => {
-    let firstword, restOfTheWord;
+  const handleLowercase = () => setText(text.toLowerCase());
+  const handleUppercase = () => setText(text.toUpperCase());
+  const handleTitlecase = () => {
+    let firstLetter, restOfTheWord;
     const titleCaseTokenize = [];
 
     const tokenize = text.split(' ');
     tokenize.forEach((word) => {
-      firstword = word.charAt(0).toUpperCase();
+      firstLetter = word.charAt(0).toUpperCase();
       restOfTheWord = word.slice(1).toLowerCase();
-      titleCaseTokenize.push(firstword + restOfTheWord);
+      titleCaseTokenize.push(firstLetter + restOfTheWord);
     });
     const titleCase = titleCaseTokenize.join(' ');
     setText(titleCase);
@@ -62,7 +49,7 @@ function App() {
         {/* word and character count goes here */}
         <div>
           <p>
-            <span>{wordCount}</span> word
+            <span>{text.split(' ').filter((word) => word != '').length}</span> word
           </p>
           <p>
             <span>{text.trim().length}</span> characters
@@ -70,9 +57,9 @@ function App() {
         </div>
         {/* buttons goes here */}
         <div className="space-x-10">
-          <button onClick={titlecase}>Titlecase</button>
-          <button onClick={uppercase}>UPPERCASE</button>
-          <button onClick={lowercase}>lowercase</button>
+          <button onClick={handleTitlecase}>Titlecase</button>
+          <button onClick={handleUppercase}>UPPERCASE</button>
+          <button onClick={handleLowercase}>lowercase</button>
         </div>
       </footer>
     </>
