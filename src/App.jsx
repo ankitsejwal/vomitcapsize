@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       <header>
-        <span>3</span> min read
+        <span>{Math.ceil(text.split(' ').length / 225)}</span> min read
       </header>
       <main>
         <textarea
