@@ -25,6 +25,12 @@ function App() {
   return (
     <>
       <header>
+        {/* 
+        Formula explanation
+        total words - text.split(' ').length
+        wpm         - 225 (average reading speed of an adult, 225 words per minute)
+        Math.ceil   - The Math.ceil() static method always rounds up and returns the smaller integer greater than or equal to a given number.
+        */}
         <span>{Math.ceil(text.split(' ').length / 225)}</span> min read
       </header>
       <main>
@@ -42,7 +48,7 @@ function App() {
         <div className="space-x-10  bg-white">
           <button onClick={handleClear}>clear</button>
           <button onClick={handleRemoveWhiteSpace}>remove white space</button>
-          <button onClick={handleCopytoClipboard}>paste</button>
+          <button onClick={handleCopytoClipboard}>copy</button>
         </div>
       </main>
       <footer>
