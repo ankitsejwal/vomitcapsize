@@ -27,16 +27,15 @@ function App() {
       <header>
         {/* 
         Formula explanation
-        total words - text.split(' ').length
-        wpm         - 225 (average reading speed of an adult, 225 words per minute)
-        Math.ceil   - The Math.ceil() static method always rounds up and returns the smaller integer greater than or equal to a given number.
+        total words       - text.split(' ').length
+        words per minute  - 225 (average reading speed of an adult, 225 wpm)
+        Math.ceil         - The Math.ceil() static method always rounds up and returns 
+                            the smaller integer greater than or equal to a given number.
         */}
         <span>{Math.ceil(text.split(' ').length / 225)}</span> min read
       </header>
       <main>
         <textarea
-          name=""
-          id=""
           cols="50"
           rows="20"
           value={text}
